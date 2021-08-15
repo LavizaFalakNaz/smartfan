@@ -135,5 +135,5 @@
           exit();
      }
      else{
-          header("Location: signin.php?error=Something went wrong. Please try again.")
+          header("Location: signin.php?error=Something went wrong. Please try again.");
      }
