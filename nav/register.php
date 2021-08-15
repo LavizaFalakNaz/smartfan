@@ -98,7 +98,10 @@
                          die('Error: '.mysqli_error($conn));
                     }
                }
-               $to = $username;
+
+               header("Location: ../mail.php?username=$username&vkey=$vkey");
+
+               /*$to = $username;
                $subject = "Email Verification";
                
                $message = "
@@ -116,20 +119,21 @@
                $headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
 
                // More headers
-               $headers .= 'From: hello@lavizadevelops.com' . "\r\n";
+               $headers .= 'From: hello@lavizadevelops.com' . "\r\n";*/
 
-               if(!mail($to, $subject, $message, $headers))
-               {
-                    echo "Email couldnt be sent!";
-               }
-               else{
-                    header("Location: display.php");
-                    exit();
-               }
           }
      }
      else
      {
           header("Location: signin.php?error=Please Enter your Details");
           exit();
+     }
+
+     if(isset($_GET['msg']) && $_GET['msg']=="Success")
+     {
+          header("Location: display.php");
+          exit();
+     }
+     else{
+          header("Location: signin.php?error=Something went wrong. Please try again.")
      }
