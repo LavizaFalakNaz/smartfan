@@ -42,20 +42,18 @@ function smtpmailer($to, $from, $from_name, $subject, $body)
     }
     
     $vkey = $_GET['vkey'];
-    $to   = 'hello@lavizadevelop.com';
-    $from = $_GET['username'];
+    $to   = $_GET['username'];
+    $from = 'hello@lavizadevelops.com';
     $name = 'Auto email - Smart Fans';
     $subj = 'Email Verification from Smart Fans';
-    $msg = "
-          <h3>Thankyou for choosing Smart Fans</h3>
-          <p>We received a registration request from your email and this email is sent to confirm your registration. 
-          <a href='https://smartfan-dashboard.herokuapp.com/dashboard/nav/verify.php?vkey=$vkey'>
-          Click here to Verify your account 
-          </a>
-          <hr>
-          <p>Please ignore this email if you have already verified your account</p>
-          <p><strong>If you received this email without consent or have not registered for SmartFans, please dont click on the provided link as the malicious user may get access to your account unintentionally. Please discard this email immediately.</strong><p>
-     ";
+    $msg = "<h3>Thankyou for choosing Smart Fans</h3>";
+    $msg .= "<p>We received a registration request from your email and this email is sent to confirm your registration.</p>";
+    $msg .= "<a href='https://smartfan-dashboard.herokuapp.com/dashboard/nav/verify.php?vkey=$vkey'>";
+    $msg .= "Click here to Verify your account ";
+    $msg .= "</a>";
+    $msg .= "<hr>";
+    $msg .= "<p>Please ignore this email if you have already verified your account</p>";
+    $msg .= "<p><strong>If you received this email without consent or have not registered for SmartFans, please dont click on the provided link as the malicious user may get access to your account unintentionally. Please discard this email immediately.</strong><p>";
     
     $error=smtpmailer($to,$from, $name ,$subj, $msg);
     
