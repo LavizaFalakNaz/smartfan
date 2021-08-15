@@ -31,7 +31,16 @@
           else{
                $to = $username;
                $subject = "Email Verification";
-               $message = "<a href='http://localhost/dashboard/nav/verify.php?vkey=$vkey'>Click here to Verify your account</a>";
+               $message = "
+                    <h3>Thankyou for choosing Smart Fans</h3>
+                    <p>We received a registration request from your email and this email is sent to confirm your registration. 
+                    <a href='https://smartfan-dashboard.herokuapp.com/dashboard/nav/verify.php?vkey=$vkey'>
+                    Click here to Verify your account 
+                    </a>
+                    <hr>
+                    <p>Please ignore this email if you have already verified your account</p>
+                    <p><strong>If you received this email without consent or have not registered for SmartFans, please dont click on the provided link as the malicious user may get access to your account unintentionally. Please discard this email immediately.</strong><p>
+               ";
                // Always set content-type when sending HTML email
                $headers = "MIME-Version: 1.0" . "\r\n";
                $headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";

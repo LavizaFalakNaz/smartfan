@@ -11,7 +11,12 @@
      //process verification 
      $vkey = $_GET['vkey']; 
 
-     $mysqli = NEW MySQLi('localhost','root','','user');
+     $host = "remotemysql.com:3306";
+     $user = "adbWXh8Aas";
+     $pass = "lzEnLOhuZO";
+     $db = "adbWXh8Aas";
+
+     $mysqli = NEW MySQLi($host, $user, $pass, $db);
 
      $resultSet = $mysqli->query("SELECT is_active, vkey FROM users WHERE is_active = 0 AND vkey='$vkey' LIMIT 1");
           if($resultSet->num_rows == 1){
