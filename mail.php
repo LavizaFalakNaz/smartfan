@@ -7,7 +7,7 @@ function smtpmailer($to, $from, $from_name, $subject, $body)
         $mail->IsSMTP();
         $mail->SMTPAuth = true; 
  
-        $mail->SMTPSecure = 'auto'; 
+        $mail->SMTPSecure = 'ssl'; 
         $mail->Host = 'smtpout.secureserver.net';
         $mail->Port = 465;  
         $mail->Username = 'hello@lavizadevelops.com';
