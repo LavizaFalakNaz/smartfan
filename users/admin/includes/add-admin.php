@@ -29,7 +29,7 @@
                die('Error: '.mysqli_error($con));
           }
           else{
-               header("Location: ../../mail.php?username=$username&vkey=$vkey&term=Admin");
+               header("Location: ../../../mail.php?username=$username&vkey=$vkey&term=Admin");
           }
      }
      else
