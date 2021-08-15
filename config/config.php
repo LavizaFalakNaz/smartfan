@@ -1,9 +1,9 @@
 <?php
 
-     $host = "localhost";
-     $user = "root";
-     $pass = "";
-     $db = "user";
+     $host = "https://remotemysql.com/phpmyadmin";
+     $user = "adbWXh8Aas";
+     $pass = "lzEnLOhuZO";
+     $db = "adbWXh8Aas";
 
      $conn = mysqli_connect($host, $user, $pass, $db);
 
