@@ -1,6 +1,6 @@
 <?php
 
-     $host = "https://remotemysql.com/phpmyadmin";
+     $host = "remotemysql.com:3306";
      $user = "adbWXh8Aas";
      $pass = "lzEnLOhuZO";
      $db = "adbWXh8Aas";
