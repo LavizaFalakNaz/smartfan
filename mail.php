@@ -1,7 +1,7 @@
 <?php
-require "PHPMailer/PHPMailerAutoload.php";
+    require "PHPMailer/PHPMailerAutoload.php";
 
-function smtpmailer($to, $from, $from_name, $subject, $body)
+    function smtpmailer($to, $from, $from_name, $subject, $body)
     {
         $mail = new PHPMailer();
         $mail->IsSMTP();
@@ -45,7 +45,7 @@ function smtpmailer($to, $from, $from_name, $subject, $body)
     {
         $vkey = $_GET['vkey'];
         $username = $_GET['username'];
-        
+
         $to   = $username;
         $from = 'hello@lavizadevelops.com';
         $name = 'Smart Fans';
