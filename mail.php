@@ -44,9 +44,10 @@ function smtpmailer($to, $from, $from_name, $subject, $body)
     if(isset($_GET['username']) && isset($_GET['vkey']))
     {
         $vkey = $_GET['vkey'];
-        $to   = $_GET['username'];
+        $username = $_GET['username'];
+        $to   = $username;
         $from = 'hello@lavizadevelops.com';
-        $name = 'Laviza Falak Naz';
+        $name = 'Smart Fans';
         $subj = 'Email Verification from Smart Fans';
         $msg = "<h3>Thankyou for choosing Smart Fans</h3>";
         $msg .= "<p>We received a registration request from your email and this email is sent to confirm your registration.</p>";
