@@ -100,6 +100,7 @@
                }
 
                header("Location: ../mail.php?username=$username&vkey=$vkey");
+               exit();
 
                /*$to = $username;
                $subject = "Email Verification";

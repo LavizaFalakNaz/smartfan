@@ -30,6 +30,7 @@
           }
           else{
                header("Location: ../../../mail.php?username=$username&vkey=$vkey&term=Admin");
+               exit();
           }
      }
      else

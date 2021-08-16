@@ -45,6 +45,7 @@ function smtpmailer($to, $from, $from_name, $subject, $body)
     {
         $vkey = $_GET['vkey'];
         $username = $_GET['username'];
+        
         $to   = $username;
         $from = 'hello@lavizadevelops.com';
         $name = 'Smart Fans';
