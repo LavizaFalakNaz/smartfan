@@ -8,10 +8,10 @@
         $mail->SMTPAuth = true; 
  
         $mail->SMTPSecure = 'ssl'; 
-        $mail->Host = 'smtpout.secureserver.net';
-        $mail->Port = 465;  
-        $mail->Username = 'hello@lavizadevelops.com';
-        $mail->Password = 'HelloWorld@123';   
+        $mail->Host = '<ADD SERVER HERE>';
+        $mail->Port = <ADD PORT HERE>;  
+        $mail->Username = '<ADD EMAIL ADDRESS>';
+        $mail->Password = '<ADD PASSWORD HERE>';   
    
    //   $path = 'reseller.pdf';
    //   $mail->AddAttachment($path);
